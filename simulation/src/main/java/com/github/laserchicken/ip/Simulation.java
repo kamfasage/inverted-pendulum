@@ -18,7 +18,7 @@ public class Simulation extends JPanel {
 	}	
 
 	private void step(){
-		plant.move();
+		plant.move(0.0d);
 	}
 
 	public static void main(String[] args) throws InterruptedException {

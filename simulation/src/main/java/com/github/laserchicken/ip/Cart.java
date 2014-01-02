@@ -9,9 +9,13 @@ public class Cart {
 	public static final int WIDTH = 80;
 	public static final int HEIGHT = 50;
 
-	void move(){
+	public void move(){
 		x++;
 		//y++;
+	}
+
+	public void move(int dx){
+		x += dx;
 	}
 
 	public void paint(Graphics2D g){
