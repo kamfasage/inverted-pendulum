@@ -1,4 +1,4 @@
-package ip;
+package com.github.laserchicken.ip;
 
 import java.awt.Graphics2D;
 

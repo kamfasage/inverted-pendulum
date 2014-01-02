@@ -1,4 +1,4 @@
-package ip;
+package com.github.laserchicken.ip;
 
 import java.awt.Graphics2D;
 
@@ -9,7 +9,7 @@ public class Rod {
 
 	double fi = 0;
 	
-	public static final int LENGTH = 60;
+	public static final int LENGTH = 150;
 
 	void move(){
 		pivotX++;
@@ -22,9 +22,9 @@ public class Rod {
 	}
 
 	public void paint(Graphics2D g){
-		double y = Math.sin(fi) * (double) LENGTH;
-		double x = Math.cos(fi) * (double) LENGTH;
-		g.drawLine(pivotX, pivotY, pivotX + (int)x, pivotY + (int)y);
+		double y = Math.cos(fi) * (double) LENGTH;
+		double x = Math.sin(fi) * (double) LENGTH;
+		g.drawLine(pivotX, pivotY, pivotX - (int)x, pivotY - (int)y);
 	}	
 
 	public int getPivotX(){

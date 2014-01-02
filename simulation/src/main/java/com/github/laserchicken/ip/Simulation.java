@@ -1,4 +1,4 @@
-package ip;
+package com.github.laserchicken.ip;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -8,17 +8,17 @@ import java.awt.Point;
 public class Simulation extends JPanel {
 
 	private static final String TITLE = "Simulation";
-	Cart cart = new Cart();
+	Plant plant = new Plant();
 
 	@Override
 	public void paint(Graphics g) {
 		super.paint(g); //cleans the screen
 		Graphics2D g2d = (Graphics2D) g;
-		cart.paint(g2d);
+		plant.paint(g2d);
 	}	
 
 	private void step(){
-		cart.move();
+		plant.move();
 	}
 
 	public static void main(String[] args) throws InterruptedException {
@@ -30,7 +30,7 @@ public class Simulation extends JPanel {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
-		while (true) {
+		while(true) {
 			simulation.step();
 			simulation.repaint();
 			Thread.sleep(10);
