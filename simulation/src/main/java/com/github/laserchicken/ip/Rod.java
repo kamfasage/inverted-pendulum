@@ -16,9 +16,14 @@ public class Rod {
 		//y++;
 	}
 
-	void move(int pivotDx, double Dfi){
+	/*	void move(int pivotDx, double Dfi){
 		pivotX += pivotDx;
 		fi += Dfi;
+	}*/
+
+	void move(int pivotX, double fi){
+		this.pivotX = pivotX;
+		this.fi = fi;
 	}
 
 	public void paint(Graphics2D g){

@@ -33,7 +33,7 @@ public class Simulation extends JPanel {
 		while(true) {
 			simulation.step();
 			simulation.repaint();
-			Thread.sleep(10);
+			Thread.sleep(1);
 		}
 					
 	}

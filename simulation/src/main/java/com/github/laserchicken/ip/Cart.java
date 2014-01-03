@@ -14,9 +14,13 @@ public class Cart {
 		//y++;
 	}
 
-	public void move(int dx){
+	/*	public void move(int dx){
 		x += dx;
-	}
+	}*/
+
+	public void move(int x){
+		this.x = x;
+	}	
 
 	public void paint(Graphics2D g){
 		g.drawRect(x-WIDTH/2, y-HEIGHT/2, WIDTH, HEIGHT);

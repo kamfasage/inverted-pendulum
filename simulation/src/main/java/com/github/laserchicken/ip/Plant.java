@@ -11,7 +11,7 @@ public class Plant {
 	public Plant(){
 		cart = new Cart();
 		rod = new Rod();
-		dynamics = new Dynamics();
+		dynamics = new Dynamics(rod.LENGTH);
 	}
 
 	public void move(){
@@ -24,8 +24,8 @@ public class Plant {
 	 */
 	public void move(double f){
 		dynamics.update(f);
-		cart.move(dynamics.getCartDx());
-		rod.move(dynamics.getCartDx(), dynamics.getRodDfi());
+		cart.move(dynamics.getCartX());
+		rod.move(dynamics.getCartX(), dynamics.getRodFi());
 	}	
 
 	public void paint(Graphics2D g){
